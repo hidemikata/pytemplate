@@ -1,0 +1,20 @@
+{% extends 'app1/base.html' %}
+
+{% block main %}
+<h1>index block main.</h1>
+{% endblock %}
+
+{% block data %}
+<h3>data start</h3>
+{% for i in testctx %}
+{{i}}
+<br>
+{% endfor %}
+<form action="{% url 'app1:about' pk=id %}" method="post">
+    {%csrf_token %}
+       <input type="text" name="name" size="30" maxlength="20"></td>
+       <input type="submit" name="good" value="hogevalue"　id="test">
+</form>
+ 
+{% endblock %}
+
