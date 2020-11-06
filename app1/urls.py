@@ -8,3 +8,4 @@ urlpatterns = [
     path('about/<int:pk>', AboutView.as_view(), name='about'),
     path('request/', RequestView.as_view(), name='request'),
 ]
+
