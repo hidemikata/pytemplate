@@ -4,6 +4,21 @@
 <h2>about block main.</h2>
 {{message}}<br>
 {{name}}<br>
+
+<h2> models </h2>
+<h3> all </h3>
+{% for i in all %}
+{{i.id}}
+{% endfor %}
+<h3> filter(id=2)</h3>
+{% for i in id2 %}
+{{i.value}}
+{% endfor %}
+<h3> getid(id=2)</h3>
+{{getid.value}}
+{{getid.pub_date}}
+<h3> save</h3>
+<h5> endblock</h3>
 {% endblock %}
 
 
