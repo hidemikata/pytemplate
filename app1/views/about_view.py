@@ -18,6 +18,10 @@ class AboutView(TemplateView):
         ctx['getid'] = getid
         #insert into 
         Topic(value=1, question_text='question_text', pub_date='2020-11-10 00:00:00.000000').save()
+
+        #modelへコール。
+        ctx['model_all'] = Topic.get_all_data()
+        
         return ctx
     def post(self, request, *args, **kwargs):
         ctxt= {
