@@ -7,5 +7,6 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('about/<int:pk>', AboutView.as_view(), name='about'),
     path('request/', RequestView.as_view(), name='request'),
+    path('chart/', ChartView.as_view(), name='chart'),
 ]
 
